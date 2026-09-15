@@ -12,7 +12,7 @@ export function renderLanding() {
       <div class="hero-grid"></div>
       <div class="container hero-content">
         <div style="max-width:700px">
-          <div class="hero-badge">🇮🇳 Smart India Hackathon 2026 &nbsp;|&nbsp; Problem Statement PS-1508</div>
+          <div class="hero-badge">🇮🇳 Smart India Hackathon 2026 &nbsp;|&nbsp; Problem Statement PS - 26032</div>
           <h1 class="hero-title">
             <span class="text-gradient">KisanSetu</span> AI<br/>
             <span style="color:var(--gold-400)">Zero Queue.</span> Fair MSP.
@@ -82,13 +82,13 @@ export function renderLanding() {
         </div>
         <div class="grid-3" style="gap:24px">
           ${[
-            { icon:'🤖', title:'AI Center Recommender', desc:'Multi-objective time minimizer considers travel time, live queue wait, and processing duration — not just distance.', badge:'XGBoost + LightGBM' },
-            { icon:'📡', title:'Real-Time Queue Tracking', desc:'Live token position updates via WebSocket. Know your exact position in queue without standing at the mandi.', badge:'< 80ms latency' },
-            { icon:'🌐', title:'Multilingual AI Assistant', desc:'Ask questions in Hindi, Marathi, Telugu, Punjabi. Get answers about your token, payment & booking instantly.', badge:'5 Languages' },
-            { icon:'📱', title:'Offline QR Pass', desc:'HMAC-SHA256 signed QR pass works without internet. Gate officers can verify bookings even in offline mode.', badge:'AES-256' },
-            { icon:'⚡', title:'Auto Rescheduling', desc:'Missed your slot? AI auto-reschedules you within 30 seconds — no 24–72 hour manual wait, no middlemen.', badge:'< 30 seconds' },
-            { icon:'💸', title:'Real-Time Payment Tracking', desc:'Track DBT disbursement from J-Form generation to PFMS processing to bank credit. Zero black-out window.', badge:'PFMS Integration' }
-          ].map(f => `
+      { icon: '🤖', title: 'AI Center Recommender', desc: 'Multi-objective time minimizer considers travel time, live queue wait, and processing duration — not just distance.', badge: 'XGBoost + LightGBM' },
+      { icon: '📡', title: 'Real-Time Queue Tracking', desc: 'Live token position updates via WebSocket. Know your exact position in queue without standing at the mandi.', badge: '< 80ms latency' },
+      { icon: '🌐', title: 'Multilingual AI Assistant', desc: 'Ask questions in Hindi, Marathi, Telugu, Punjabi. Get answers about your token, payment & booking instantly.', badge: '5 Languages' },
+      { icon: '📱', title: 'Offline QR Pass', desc: 'HMAC-SHA256 signed QR pass works without internet. Gate officers can verify bookings even in offline mode.', badge: 'AES-256' },
+      { icon: '⚡', title: 'Auto Rescheduling', desc: 'Missed your slot? AI auto-reschedules you within 30 seconds — no 24–72 hour manual wait, no middlemen.', badge: '< 30 seconds' },
+      { icon: '💸', title: 'Real-Time Payment Tracking', desc: 'Track DBT disbursement from J-Form generation to PFMS processing to bank credit. Zero black-out window.', badge: 'PFMS Integration' }
+    ].map(f => `
             <div class="card">
               <div class="card-body">
                 <div style="font-size:36px;margin-bottom:16px">${f.icon}</div>
@@ -109,12 +109,12 @@ export function renderLanding() {
           <p class="text-muted">Complete transparency from slot booking to payment in your bank account</p>
         </div>
         <div style="display:flex;gap:0;overflow-x:auto;padding:20px 0">
-          ${['📋 Booked','🚜 Arrived','✅ Gate Verified','⏳ Waiting','⚖️ Weighing','🔬 Quality Check','✔️ Accepted','🏪 Unloading','📄 Documentation','🏦 Payment Processing','💰 Payment Done'].map((s,i) => `
+          ${['📋 Booked', '🚜 Arrived', '✅ Gate Verified', '⏳ Waiting', '⚖️ Weighing', '🔬 Quality Check', '✔️ Accepted', '🏪 Unloading', '📄 Documentation', '🏦 Payment Processing', '💰 Payment Done'].map((s, i) => `
             <div style="display:flex;align-items:center;flex-shrink:0">
               <div style="text-align:center;padding:8px 12px;min-width:100px">
                 <div style="width:48px;height:48px;border-radius:50%;background:var(--gradient-green);display:flex;align-items:center;justify-content:center;font-size:18px;margin:0 auto 8px">${s.split(' ')[0]}</div>
-                <div style="font-size:11px;font-weight:600;color:var(--green-200)">${s.substring(s.indexOf(' ')+1)}</div>
-                <div style="font-size:10px;color:var(--slate-500);margin-top:3px">Stage ${i+1}</div>
+                <div style="font-size:11px;font-weight:600;color:var(--green-200)">${s.substring(s.indexOf(' ') + 1)}</div>
+                <div style="font-size:10px;color:var(--slate-500);margin-top:3px">Stage ${i + 1}</div>
               </div>
               ${i < 10 ? '<div style="width:32px;height:2px;background:var(--border-subtle);flex-shrink:0;margin-top:-16px"></div>' : ''}
             </div>`).join('')}
@@ -154,7 +154,7 @@ export function renderLanding() {
     document.getElementById('cta-register')?.addEventListener('click', () => navigate('#/register'));
     const floatCard = document.getElementById('hero-float-card');
     if (floatCard && window.innerWidth > 1200) floatCard.style.display = 'block';
-    
+
     document.getElementById('demo-login-btn')?.addEventListener('click', () => {
       AuthStore.setUser({ id: 1, name: 'Ramesh Kumar', role: 'FARMER', mobile: '9876543210', farmerId: 1, preferredLanguage: 'hi' }, 'mock-jwt-token-farmer');
       showToast('Demo login successful! Welcome, Ramesh Ji 🌾', 'success');
